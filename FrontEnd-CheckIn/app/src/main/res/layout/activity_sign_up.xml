@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kareemws.checkin.SignUp"
+    android:background="#0e2f30"
+    android:id="@+id/SignUpRelativeLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/SignUpTextViewString"
+        android:id="@+id/SignUpTextView"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/NameEditText"
+        android:layout_marginTop="46dp"
+        android:background="#ffffff"
+        android:layout_below="@+id/SignUpTextView"
+        android:layout_toRightOf="@+id/SignUpTextView"
+        android:layout_toEndOf="@+id/SignUpTextView"
+        android:layout_marginLeft="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/EmailEditText"
+        android:background="#ffffff"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/NameEditText"
+        android:layout_alignLeft="@+id/NameEditText"
+        android:layout_alignStart="@+id/NameEditText"
+        android:layout_alignRight="@+id/NameEditText"
+        android:layout_alignEnd="@+id/NameEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/PasswordEditText"
+        android:layout_below="@+id/EmailEditText"
+        android:layout_alignLeft="@+id/EmailEditText"
+        android:layout_alignStart="@+id/EmailEditText"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:layout_alignRight="@+id/EmailEditText"
+        android:layout_alignEnd="@+id/EmailEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/PasswordConfirmationEditText"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:layout_below="@+id/PasswordEditText"
+        android:layout_alignRight="@+id/PasswordEditText"
+        android:layout_alignEnd="@+id/PasswordEditText"
+        android:layout_alignLeft="@+id/PasswordEditText"
+        android:layout_alignStart="@+id/PasswordEditText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SubmitButtonString"
+        android:id="@+id/SubmissionButton"
+        android:textColor="#0e2f30"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="signUp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NameTextViewString"
+        android:id="@+id/NameTextView"
+        android:layout_alignBottom="@+id/NameEditText"
+        android:layout_alignLeft="@+id/SignUpTextView"
+        android:layout_alignStart="@+id/SignUpTextView"
+        android:height="20dp"
+        android:layout_alignTop="@+id/NameEditText"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:layout_marginLeft="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EmailTextViewString"
+        android:id="@+id/EmailTextView"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/EmailEditText"
+        android:layout_alignLeft="@+id/NameTextView"
+        android:layout_alignStart="@+id/NameTextView"
+        android:layout_alignTop="@+id/EmailEditText"
+        android:textSize="15dp"
+        android:layout_alignRight="@+id/NameTextView"
+        android:layout_alignEnd="@+id/NameTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PasswordTextViewString"
+        android:id="@+id/PasswordTextView"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/PasswordEditText"
+        android:layout_alignRight="@+id/EmailTextView"
+        android:layout_alignEnd="@id/NameTextView"
+        android:layout_above="@+id/PasswordConfirmationEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PasswordConfirmationTextViewString"
+        android:id="@+id/PasswordConfirmationTextView"
+        android:layout_alignTop="@+id/PasswordConfirmationEditText"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/EmailTextView"
+        android:layout_alignEnd="@id/NameTextView"
+        android:layout_above="@+id/MaleRadioButton" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/MaleRadioBoxString"
+        android:id="@+id/MaleRadioButton"
+        android:layout_below="@+id/PasswordConfirmationEditText"
+        android:layout_alignLeft="@+id/PasswordConfirmationEditText"
+        android:layout_alignStart="@+id/PasswordConfirmationEditText"
+        android:layout_marginTop="30dp"
+        android:focusableInTouchMode="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/FemaleRadioBoxString"
+        android:id="@+id/FemaleRadioButton"
+        android:layout_alignTop="@+id/MaleRadioButton"
+        android:layout_alignRight="@+id/PasswordConfirmationEditText"
+        android:layout_alignEnd="@+id/PasswordConfirmationEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GenderTextViewString"
+        android:id="@+id/GenderTextView"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/MaleRadioButton"
+        android:layout_alignRight="@+id/PasswordConfirmationTextView"
+        android:layout_alignEnd="@id/NameTextView" />
+
+</RelativeLayout>
