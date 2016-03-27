@@ -25,12 +25,12 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Follow extends AppCompatActivity {
+public class UnFollow extends AppCompatActivity {
     static RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_follow);
+        setContentView(R.layout.activity_unfollow);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
     }
 
@@ -54,16 +54,16 @@ public class Follow extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public void follow(View view) {
+    public void unfollow(View view) {
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                "http://firstapp-seapp.rhcloud.com/FCISquareBackend-master-1cb83b45ba096969d4bc7b9c7baa6a12ba4c1227/rest/follow",
+                "http://firstapp-seapp.rhcloud.com/FCISquareBackend-master-1cb83b45ba096969d4bc7b9c7baa6a12ba4c1227/rest/unFollow",
                 new Response.Listener<String>()
                 {
                     @Override
                     public void onResponse(String response)
                     {
-                        Toast.makeText(Follow.this, response , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UnFollow.this, response , Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener()
@@ -71,7 +71,7 @@ public class Follow extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error)
                     {
-                        Toast.makeText(Follow.this, error.getMessage() + "AAAA", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UnFollow.this, error.getMessage() + "AAAA", Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override
@@ -83,7 +83,6 @@ public class Follow extends AppCompatActivity {
 
             }
         };
-        Follow.requestQueue.add(stringRequest);
+        UnFollow.requestQueue.add(stringRequest);
     }
-
 }
